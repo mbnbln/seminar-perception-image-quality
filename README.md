@@ -1,0 +1,1 @@
+# seminar-perception-image-quality
