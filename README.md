@@ -1,1 +1,3 @@
 # seminar-perception-image-quality
+
+tba ...
