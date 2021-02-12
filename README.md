@@ -22,6 +22,8 @@ Bilder werden für die Übertragung im Internet häufig komprimiert, um die Date
 
 Das nachfolgende Experiment untersucht, wie sich die wahrgenommene Bildqualität beim Komprimieren verändert. Diese wahrgenommene Bildqualität wird in Relation zur Dateigröße betrachtet. Um die Veränderung der wahrgenommenen Bildqualität zu untersuchen, verwenden wir die MLDS-Methode auf der Grundlage von Triaden-Vergleichen, wie von Charrier et al. [1] beschrieben.
 
+Unsere Untersuchungshypothese ist, dass sich die wahrgenommene Bildqualität proportional zur Dateigröße verändert und somit mit steigender Dateigröße in gleichem oder ähnlichem Maß ansteigt.
+
 ## 2. Experimentelles Design
 
 Als Ausgangsdaten für unsere Untersuchung verwendeten wir Bilder aus der Colourlab Image Database:Image Quality (CID:IQ) des Norwegian Colour and Visual Computing Laboratory der Norwegian University of Science and Technology [2]. Wir entschieden uns für diesen Bilddatensatz, da die Bilder für Forschungszwecke verwendet werden dürfen und im unkomprimierten BMP-Format zur Verfügung gestellt werden.
@@ -39,7 +41,7 @@ print_images()
 
 Für die Komprimierung der Bilder nutzten wir die Python Image Library (PIL) mit der Funktion save(), die beim Aufruf als Argumente das Zielformat (JPEG) sowie einen ganzzahligen quality-Parameter zwischen 0 (größte Kompression, geringste Dateigröße) und 95 (geringste Kompression, größte Dateigröße) übergeben bekommt. Von der Verwendung von quality-Parametern größer als 95 wird in der PIL-Dokumentation abgeraten, weshalb wir diese Werte nicht weiter betrachten.
 
-Unsere Untersuchungshypothese ist, dass sich die wahrgenommene Bildqualität proportional zur Dateigröße verändert. Für quality-Parameter von 0 bis 2 ändert sich die Dateigröße fast gar nicht. Im Bereich der quality-Parameter von 3 bis etwa 60 folgt die Veränderung der Dateigröße in etwa dem Verlauf eines Graphen einer linearen Funktion. Oberhalb des quality-Paramters von 60 steigt die Kurve, die die Dateigröße darstellt, steil an und folgt in ihrer Form dem Verlauf einer quadratischen Funktion. Wir gehen aufgrund unserer Hypothese also davon aus, dass die wahrgenommene Bildqualität in etwa dem Kurvenverlauf des Wachstums der Dateigröße mit steigendem quality-Paramter erhöht.
+Für quality-Parameter von 0 bis 2 ändert sich die Dateigröße fast gar nicht. Im Bereich der quality-Parameter von 3 bis etwa 60 folgt die Veränderung der Dateigröße in etwa dem Verlauf eines Graphen einer linearen Funktion. Oberhalb des quality-Paramters von 60 steigt die Kurve, die die Dateigröße darstellt, steil an und folgt in ihrer Form dem Verlauf einer quadratischen Funktion. Wir gehen aufgrund unserer Hypothese also davon aus, dass die wahrgenommene Bildqualität in etwa dem Kurvenverlauf des Wachstums der Dateigröße mit steigendem quality-Paramter erhöht.
 
 
 ```python
