@@ -125,6 +125,7 @@ plotQualitySizeRatioStimuli()
 
 ```python
 plot_mlds('05')
+plot_mlds_filesize('05')
 print_stimuli(5, front_parameter)
 print_stimuli(5, back_parameter)
 ```
@@ -148,8 +149,15 @@ print_stimuli(5, back_parameter)
 
 
 
+    
+![png](output_18_3.png)
+    
+
+
+
 ```python
 plot_mlds('09')
+plot_mlds_filesize('09')
 print_stimuli(9, front_parameter)
 print_stimuli(9, back_parameter)
 ```
@@ -173,8 +181,15 @@ print_stimuli(9, back_parameter)
 
 
 
+    
+![png](output_19_3.png)
+    
+
+
+
 ```python
 plot_mlds('18')
+plot_mlds_filesize('18')
 print_stimuli(18, front_parameter)
 print_stimuli(18, back_parameter)
 ```
@@ -198,8 +213,15 @@ print_stimuli(18, back_parameter)
 
 
 
+    
+![png](output_20_3.png)
+    
+
+
+
 ```python
 plot_mlds('20')
+plot_mlds_filesize('20')
 print_stimuli(20, front_parameter)
 print_stimuli(20, back_parameter)
 ```
@@ -223,8 +245,15 @@ print_stimuli(20, back_parameter)
 
 
 
+    
+![png](output_21_3.png)
+    
+
+
+
 ```python
 plot_mlds('23')
+plot_mlds_filesize('23')
 print_stimuli(23, front_parameter)
 print_stimuli(23, back_parameter)
 ```
@@ -244,6 +273,12 @@ print_stimuli(23, back_parameter)
 
     
 ![png](output_22_2.png)
+    
+
+
+
+    
+![png](output_22_3.png)
     
 
 
@@ -491,6 +526,34 @@ def plot_mlds(filenumber):
     ax2.set_ylim([-2,5])
     ax4.set_ylim([0,12])
     lines = [p1, p2, p3, p4]
+    plt.legend(lines, [l.get_label() for l in lines])
+    plt.show()    
+```
+
+
+```python
+def plot_mlds_filesize(filenumber):
+    fig=plt.figure(figsize=(13,13))
+    fig.suptitle('MLDS-Triads with Filesize on x axis: final{}.bmp'.format(filenumber), y=0.92)
+    ax1 = plt.subplot(221)
+    ax2 = plt.subplot(222)
+    ax1.set_ylabel('Difference Scale Value')
+    ax1.set_xlabel('Dateigröße relativ zum Original in Prozent')
+    ax2.set_xlabel('Dateigröße relativ zum Original in Prozent')
+    ax2.set_yticklabels([])
+    p1, = ax1.plot(filesize_relative[filenumbers.index(filenumber)][0:8], mlds_jp[filenumbers.index(filenumber)][0], marker='o', label="Johann")
+    p2, = ax1.plot(filesize_relative[filenumbers.index(filenumber)][0:8], mlds_mb[filenumbers.index(filenumber)][0], marker='o', label="Marcus")
+    p3, = ax1.plot(filesize_relative[filenumbers.index(filenumber)][0:8], mlds_tu[filenumbers.index(filenumber)][0], marker='o', label="Tobias")
+    ax1.grid(axis='y')
+    ax1.set_xlim([.6,2.2])
+    ax2.set_xlim([2.5,11.8])
+    ax2.plot(filesize_relative[filenumbers.index(filenumber)][8:], mlds_jp[filenumbers.index(filenumber)][1], marker='o', label="Johann")
+    ax2.plot(filesize_relative[filenumbers.index(filenumber)][8:], mlds_mb[filenumbers.index(filenumber)][1], marker='o', label="Marcus")
+    ax2.plot(filesize_relative[filenumbers.index(filenumber)][8:], mlds_tu[filenumbers.index(filenumber)][1], marker='o', label="Tobias")
+    ax2.grid(axis='y')
+    ax1.set_ylim([-2,5])
+    ax2.set_ylim([-2,5])
+    lines = [p1, p2, p3]
     plt.legend(lines, [l.get_label() for l in lines])
     plt.show()    
 ```
