@@ -20,7 +20,7 @@ sns.set_context('talk')
 
 Bilder werden für die Übertragung im Internet häufig komprimiert, um die Dateigröße zu verringern und damit die zu übertragende Datenmenge zu reduzieren. Eines der verbreitetsten Dateiformate für die Bildkompression ist das JPEG-Format. Bei einer solchen Bildkompression handelt es sich um eine verlustbehaftete Bildkomprimierung, das heißt Bildinformationen gehen objektiv verloren.
 
-Das nachfolgende Experiment untersucht, wie sich die wahrgenommene Bildqualität beim Komprimieren verändert. Diese wahrgenommene Bildqualität wird in Relation zur Dateigröße betrachtet. Um die Veränderung der wahrgenommenen Bildqualität zu untersuchen, verwenden wir die MLDS-Methode auf der Grundlage von Triaden-Vergleichen, wie von Charrier et al. beschrieben [1](#referenzen).
+Das nachfolgende Experiment untersucht, wie sich die wahrgenommene Bildqualität beim Komprimieren verändert. Diese wahrgenommene Bildqualität wird in Relation zur Dateigröße betrachtet. Um die Veränderung der wahrgenommenen Bildqualität zu untersuchen, verwenden wir die MLDS-Methode auf der Grundlage von Triaden-Vergleichen, wie von Charrier et al. beschrieben [[1]](#referenzen).
 
 Unsere Untersuchungshypothese ist, dass sich die wahrgenommene Bildqualität proportional zur Dateigröße verändert und somit mit steigender Dateigröße in gleichem oder ähnlichem Maß ansteigt.
 
