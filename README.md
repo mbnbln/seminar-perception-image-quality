@@ -64,7 +64,7 @@ plotQualitySizeRatioAll()
     
 
 
-Anders als etwa bei der Bildkomprimierung mittels Vektor-Quantifizierung wie in [[1]](#referenzen), können wir mit der save()-Methode der Python Image Library die gewünschte Dateigröße des komprimierten Bildes nicht manuell bestimmen. Um die Veränderung der wahrgenommenen Bildqualität zwischen den einzelnen Stimuli zu ermöglichen, wählen wir aus dem Datensatz insgesamt fünf Bilder mit einem ähnlichen Verhältnis zwischen steigendem quality-Parameter und Dateigröße aus.
+Anders als etwa bei der Bildkomprimierung mittels Vektor-Quantifizierung wie in [[1]](#referenzen), können wir mit der save()-Methode der Python Image Library die gewünschte Dateigröße des komprimierten Bildes nicht manuell bestimmen. Um die Veränderung der wahrgenommenen Bildqualität zwischen den einzelnen Stimuli zu vergleichen, wählen wir aus dem Datensatz insgesamt fünf Bilder mit einem ähnlichen Verhältnis zwischen steigendem quality-Parameter und Dateigröße aus.
 
 
 ```python
@@ -77,7 +77,7 @@ plotQualitySizeRatioAllFocused()
     
 
 
-Da die Versuchspersonen die Stimuli vollständig und in 100-Prozent-Auflösung auf ihrem Bildschirm darstellen können sollten, verringerten wir die Bildgröße der Originalbilder von 800 x 800 Pixel auf 500 x 500 Pixel mittels der Python-Funktion resize(), die als Argument ein Paar bestehend aus der gewünschten Bildhöhe und Bildbreite in Pixel übergeben bekommt. Diese Ausgangsbilder für die folgenden Experimente speicherten wir wieder im BMP-Format ab, sodass bei dieser Größenanpassung noch keine Bildkompression stattfand.
+Da die Versuchspersonen die Stimuli vollständig und in 100-Prozent-Auflösung auf ihrem Bildschirm darstellen können sollen, verringern wir die Bildgröße der Originalbilder von 800 x 800 Pixel auf 500 x 500 Pixel mittels der Python-Funktion resize(), die als Argument ein Paar bestehend aus der gewünschten Bildhöhe und Bildbreite in Pixel übergeben bekommt. Diese Ausgangsbilder für die folgenden Experimente speichern wir wieder im BMP-Format ab, sodass bei dieser Größenanpassung noch keine Bildkompression stattfindet.
 
 
 ```python
